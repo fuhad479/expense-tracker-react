@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Satoshi', sans-serif;
+    background: rgb(0 2 18);
+    color: rgb(169, 172, 187);
+}
+
+a {
+    color: inherit;
+}
+
+img,
+svg,
+button {
+    display: block;
+}
+
+button,
+input,
+textarea {
+    appearance: none;
+}
+
+button,
+input[type='submit'] {
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+input[type='submit'] {
+    &:focus {
+        outline: none;
+    }
+}
+
+img,
+svg {
+    width: 100%;
+    height: 100%;
+}

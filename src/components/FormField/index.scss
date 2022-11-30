@@ -1,0 +1,22 @@
+.form-field {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 7px;
+    label {
+        display: block;
+    }
+    input {
+        background: none;
+        color: white;
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
+    &:focus-within {
+        border-color: #3644d3;
+    }
+}
