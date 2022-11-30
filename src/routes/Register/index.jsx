@@ -2,13 +2,14 @@ import { Link } from 'react-router-dom'
 import { PersonIcon } from '@radix-ui/react-icons'
 import { EnvelopeClosedIcon } from '@radix-ui/react-icons'
 import { LockClosedIcon } from '@radix-ui/react-icons'
+import AuthenticationForm from '../../components/AuthenticationForm'
 import FormField from '../../components/FormField'
 import './index.scss'
 
 export default function Register() {
     return (
         <div className="register-page">
-            <form
+            <AuthenticationForm
                 onSubmit={() => console.log('on submit handler')}
                 className="registration-form"
             >
@@ -50,7 +51,7 @@ export default function Register() {
                     type="submit"
                     value="Create account"
                 />
-            </form>
+            </AuthenticationForm>
         </div>
     )
 }
