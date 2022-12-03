@@ -11,7 +11,7 @@ export default function FormField({
 }) {
     return (
         <div className="form-field">
-            <label htmlFor={id}>{icon}</label>
+            {icon && <label htmlFor={id}>{icon}</label>}
             <input
                 type={type}
                 name={name}

@@ -1,0 +1,29 @@
+.sidebar {
+    width: 300px;
+    border-right: 1px solid hsl(227deg, 37%, 23%);
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: .9375rem;
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            .avatar {
+                border-radius: 100%;
+                overflow: hidden;
+            }
+            h3 {
+                font-size: 1.125rem;
+            }
+        }
+        button {
+            background: linear-gradient(#6170e9 5%, #3644d3 90%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 0.4375rem;
+        }
+    }
+}

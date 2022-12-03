@@ -1,0 +1,14 @@
+.transactions-page {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .transactions-content {
+        width: 800px;
+        display: flex;
+        background: #181c2a;
+        border: 0.5px solid hsl(227, 37%, 23%);
+        border-radius: 16px;
+    }
+}

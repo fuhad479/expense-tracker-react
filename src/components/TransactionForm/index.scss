@@ -1,0 +1,54 @@
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid hsl(227deg 37% 23%);
+    padding: 15px;
+    &-fields {
+        display: flex;
+        gap: 15px;
+        input,
+        select {
+            background: none;
+            color: white;
+            border: 1px solid rgb(169 172 187);
+            border-radius: 6px;
+            padding: 7px;
+            &:focus {
+                outline: none;
+            }
+        }
+        select {
+            color: rgb(169 172 187);
+        }
+    }
+    .transaction-types {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        .income,
+        .expense {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            label {
+                display: block;
+                width: auto;
+            }
+            input {
+                width: auto;
+            }
+        }
+    }
+    input {
+        width: 100%;
+        &[type='submit'] {
+            background: linear-gradient(#6170e9 5%, #3644d3 90%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 0.4375rem;
+        }
+    }
+}

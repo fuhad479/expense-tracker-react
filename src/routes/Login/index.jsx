@@ -31,7 +31,7 @@ export default function Login() {
                         console.log('onChangeHandler function')
                     }
                 />
-                <Link to="/login">Don't have an account? Signup.</Link>
+                <Link to="/">Don't have an account? Signup.</Link>
                 <input
                     type="submit"
                     value="Login"
