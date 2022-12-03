@@ -1,5 +1,6 @@
 import { FormattedNumber } from 'react-intl'
 import TransactionForm from '../TransactionForm'
+import Pagination from '../Pagination'
 import './index.scss'
 
 export default function Transactions() {
@@ -75,6 +76,7 @@ export default function Transactions() {
                         </span>
                     </li>
                 </ul>
+                <Pagination />
             </div>
         </div>
     )
