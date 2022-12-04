@@ -29,7 +29,6 @@ export default function Login() {
     useEffect(() => {
         if (isSuccess) {
             navigate('/transactions')
-            console.log(data)
         } else if (isError) {
             console.log(error.data)
         }

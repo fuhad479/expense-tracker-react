@@ -1,4 +1,5 @@
 import { apiSlice } from '../api/apiSlice'
+import { loggedIn } from '../users/usersSlice'
 
 const usersApi = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
@@ -7,9 +8,16 @@ const usersApi = apiSlice.injectEndpoints({
                 url: '/users',
                 method: 'POST',
                 body: data
+            })
+        }),
+        loginUser: builder.mutation({
+            query: (data) => ({
+                url: '/login',
+                method: 'POST',
+                body: data
             }),
-            async onQueryStarted(_, { queryFulfilled }) {
-                // this is newly created user data
+            async onQueryStarted(_, { queryFulfilled, dispatch }) {
+                // this is new user data after logging in
                 const {
                     data: {
                         accessToken,
@@ -22,14 +30,9 @@ const usersApi = apiSlice.injectEndpoints({
                     'authenticated_user',
                     JSON.stringify({ accessToken, name, email, id })
                 )
+
+                dispatch(loggedIn({ accessToken, email, name, id }))
             }
-        }),
-        loginUser: builder.mutation({
-            query: (data) => ({
-                url: '/login',
-                method: 'POST',
-                body: data
-            })
         })
     })
 })
