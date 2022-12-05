@@ -1,5 +1,5 @@
-import { FormattedNumber } from 'react-intl'
 import TransactionForm from '../TransactionForm'
+import TransactionList from './TransactionList'
 import Pagination from '../Pagination'
 import './index.scss'
 
@@ -24,58 +24,7 @@ export default function Transactions() {
                 </div>
             </div>
             <div className="transaction-body">
-                <ul className="transaction-list">
-                    <li className="transaction-item">
-                        <span>Lorem, ipsum dolor.</span>
-                        <span>
-                            <FormattedNumber
-                                style={['currency']}
-                                currency="USD"
-                                value={300}
-                            />
-                        </span>
-                    </li>
-                    <li className="transaction-item">
-                        <span>Lorem, ipsum dolor.</span>
-                        <span>
-                            <FormattedNumber
-                                style={['currency']}
-                                currency="USD"
-                                value={300}
-                            />
-                        </span>
-                    </li>
-                    <li className="transaction-item">
-                        <span>Lorem, ipsum dolor.</span>
-                        <span>
-                            <FormattedNumber
-                                style={['currency']}
-                                currency="USD"
-                                value={300}
-                            />
-                        </span>
-                    </li>
-                    <li className="transaction-item">
-                        <span>Lorem, ipsum dolor.</span>
-                        <span>
-                            <FormattedNumber
-                                style={['currency']}
-                                currency="USD"
-                                value={300}
-                            />
-                        </span>
-                    </li>
-                    <li className="transaction-item">
-                        <span>Lorem, ipsum dolor.</span>
-                        <span>
-                            <FormattedNumber
-                                style={['currency']}
-                                currency="USD"
-                                value={300}
-                            />
-                        </span>
-                    </li>
-                </ul>
+                <TransactionList />
                 <Pagination />
             </div>
         </div>

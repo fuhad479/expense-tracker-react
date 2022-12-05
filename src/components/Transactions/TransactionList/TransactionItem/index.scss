@@ -1,0 +1,48 @@
+.transaction-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.1875rem 0.4375rem 0.1875rem 0;
+    position: relative;
+    span {
+        margin-left: 0.4375rem;
+    }
+    .transaction-actions {
+        position: absolute;
+        right: 0.4375rem;
+        display: none;
+        svg {
+            cursor: pointer;
+        }
+    }
+    &:nth-child(2) {
+        &::after {
+            background: red;
+        }
+    }
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    &:hover {
+        background: #262938;
+        span {
+            &:nth-child(2) {
+                margin-right: 3.125rem;
+            }
+        }
+        .transaction-actions {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: green;
+    }
+}
